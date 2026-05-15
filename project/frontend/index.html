@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURELIA — Luxury Fashion House</title>
+  <meta name="description" content="Discover AURELIA's curated collection of luxury fashion. Italian silk, hand-sourced cashmere, and timeless design." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Aurelia</a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="active">Collection</a>
+        <a href="about.html">Maison</a>
+        <a href="contact.html">Inquire</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:.75rem;">
+        <button class="cart-toggle" id="cart-toggle" aria-label="Open cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count" id="cart-count"></span>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="images/hero_banner.png" alt="AURELIA haute couture silhouette" />
+    </div>
+    <div class="hero-content fade-target">
+      <span class="label">Autumn / Winter 2026</span>
+      <h1>The Art of<br /><em>Quiet Luxury</em></h1>
+      <p class="lead">Pieces that speak in whispers — crafted from the rarest materials, designed for those who understand that true elegance never announces itself.</p>
+      <a href="#collection" class="btn">Explore Collection</a>
+    </div>
+  </section>
+
+  <!-- ========== COLLECTION ========== -->
+  <section class="section" id="collection">
+    <div class="container">
+      <div class="section-header fade-target">
+        <span class="label">Curated Selection</span>
+        <h2>The Collection</h2>
+      </div>
+      <div class="products-grid" id="products-grid">
+        <!-- Populated by JS from API -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDITORIAL SPLIT ========== -->
+  <div class="gold-divider"></div>
+  <section class="section">
+    <div class="container">
+      <div class="editorial-split fade-target">
+        <div class="editorial-img">
+          <img src="images/about_atelier.png" alt="AURELIA atelier workshop" />
+        </div>
+        <div class="editorial-text">
+          <span class="label">Our Philosophy</span>
+          <h2>Where Heritage Meets the Hand</h2>
+          <p>Every AURELIA piece begins as a conversation between material and maker. Our atelier in Milan houses artisans whose families have shaped fabric for three generations — their hands carry knowledge that no machine can replicate.</p>
+          <a href="about.html" class="btn">Discover Our Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CART DRAWER ========== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer__header">
+      <h3>Your Selection</h3>
+      <button class="cart-drawer__close" id="cart-close" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-drawer__items" id="cart-items">
+      <!-- Cart items rendered by JS -->
+    </div>
+    <div class="cart-drawer__footer" id="cart-footer" style="display:none;">
+      <div class="cart-total">
+        <span>Subtotal</span>
+        <span id="cart-total-price">$0</span>
+      </div>
+      <a href="checkout.html" class="btn btn-filled" id="checkout-btn">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <!-- ========== CHAT WIDGET ========== -->
+  <button class="chat-fab" id="chat-fab" aria-label="Open concierge chat">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+  </button>
+  <div class="chat-window" id="chat-window">
+    <div class="chat-header">
+      <h4>AURELIA <span class="text-gold">Concierge</span></h4>
+      <button id="chat-close" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-msg bot">Welcome to AURELIA. I'm your personal style concierge. How may I assist you today?</div>
+    </div>
+    <div class="chat-input-bar">
+      <input type="text" id="chat-input" placeholder="Ask about our collection..." />
+      <button id="chat-send" aria-label="Send message">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Aurelia</a>
+          <p>A house of quiet luxury. Italian craftsmanship, rare materials, enduring design.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Collection</a>
+          <a href="about.html">Maison</a>
+          <a href="contact.html">Inquire</a>
+          <a href="checkout.html">Checkout</a>
+        </div>
+        <div class="footer-col">
+          <h4>Client Care</h4>
+          <a href="#">Shipping & Returns</a>
+          <a href="#">Size Guide</a>
+          <a href="#">Care Instructions</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 AURELIA. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

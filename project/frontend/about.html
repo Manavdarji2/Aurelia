@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maison — AURELIA</title>
+  <meta name="description" content="The story of AURELIA — where Italian craftsmanship meets timeless design." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER (reused across pages) -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Aurelia</a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Collection</a>
+        <a href="about.html" class="active">Maison</a>
+        <a href="contact.html">Inquire</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:.75rem;">
+        <button class="cart-toggle" id="cart-toggle" aria-label="Open cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count" id="cart-count"></span>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <span class="label">Est. 1987 — Milan, Italy</span>
+      <h1>The Maison</h1>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="section">
+    <div class="container">
+      <div class="editorial-split fade-target">
+        <div class="editorial-img">
+          <img src="images/about_atelier.png" alt="AURELIA atelier" />
+        </div>
+        <div class="editorial-text">
+          <span class="label">Our Origin</span>
+          <h2>Born from Reverence for Craft</h2>
+          <p>AURELIA was founded in 1987 by Elena Moretti in a quiet studio overlooking the Navigli canals of Milan. She believed that true luxury is not about excess — it is about restraint, intention, and the sacred relationship between hand and material.</p>
+          <p>What began as a private atelier serving a discerning few has grown into a global symbol of quiet sophistication. Yet every piece still passes through the same hands, follows the same unhurried rhythm, and honors the same founding principle: nothing leaves our workshop until it is extraordinary.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- PHILOSOPHY -->
+  <section class="section">
+    <div class="container">
+      <div class="editorial-split reverse fade-target">
+        <div class="editorial-img">
+          <img src="images/product_scarf.png" alt="AURELIA silk craftsmanship" />
+        </div>
+        <div class="editorial-text">
+          <span class="label">Philosophy</span>
+          <h2>Materials as Language</h2>
+          <p>We source Italian silk from century-old mills in Como, cashmere from the highlands of Inner Mongolia, and leather from family-owned tanneries in Tuscany. Each material is chosen not for its rarity alone, but for the story it tells against the skin.</p>
+          <p>Our design philosophy is one of subtraction — removing everything that doesn't serve the wearer. What remains is pure, purposeful, and deeply personal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- TIMELINE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-target">
+        <span class="label">Our Journey</span>
+        <h2>Milestones</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item fade-target">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">1987</div>
+            <p>Elena Moretti opens the first AURELIA atelier on Via Savona, Milan. A private studio creating bespoke pieces for a circle of connoisseurs.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-target">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">1995</div>
+            <p>The first ready-to-wear collection debuts at Milan Fashion Week. Critics call it "the opposite of everything loud in fashion."</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-target">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">2004</div>
+            <p>AURELIA opens its flagship on Rue du Faubourg Saint-Honoré, Paris. The interior is designed entirely in obsidian marble and hand-forged brass.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-target">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">2018</div>
+            <p>Launch of the Sustainability Atelier — a commitment to zero-waste pattern cutting and exclusively natural, traceable materials.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-target">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">2026</div>
+            <p>The digital maison launches — bringing the AURELIA experience to clients worldwide while preserving the intimacy of our craft.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer__header">
+      <h3>Your Selection</h3>
+      <button class="cart-drawer__close" id="cart-close" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-drawer__items" id="cart-items"></div>
+    <div class="cart-drawer__footer" id="cart-footer" style="display:none;">
+      <div class="cart-total"><span>Subtotal</span><span id="cart-total-price">$0</span></div>
+      <a href="checkout.html" class="btn btn-filled" id="checkout-btn">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <!-- CHAT WIDGET -->
+  <button class="chat-fab" id="chat-fab" aria-label="Open concierge chat">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+  </button>
+  <div class="chat-window" id="chat-window">
+    <div class="chat-header">
+      <h4>AURELIA <span class="text-gold">Concierge</span></h4>
+      <button id="chat-close" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-msg bot">Welcome to AURELIA. I'm your personal style concierge. How may I assist you today?</div>
+    </div>
+    <div class="chat-input-bar">
+      <input type="text" id="chat-input" placeholder="Ask about our collection..." />
+      <button id="chat-send" aria-label="Send message">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Aurelia</a>
+          <p>A house of quiet luxury. Italian craftsmanship, rare materials, enduring design.</p>
+        </div>
+        <div class="footer-col"><h4>Navigate</h4><a href="index.html">Collection</a><a href="about.html">Maison</a><a href="contact.html">Inquire</a></div>
+        <div class="footer-col"><h4>Client Care</h4><a href="#">Shipping & Returns</a><a href="#">Size Guide</a><a href="#">Care Instructions</a></div>
+        <div class="footer-col"><h4>Connect</h4><a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">LinkedIn</a></div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 AURELIA. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
