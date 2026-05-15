@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: aurelia-backend
+    env: docker
+    region: oregon
+    plan: free
+    dockerContext: ./project
+    dockerfilePath: ./project/Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 8080
